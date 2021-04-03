@@ -1,11 +1,10 @@
 
 (function() {
   // Set our main variables
-  var model
   let scene,  
     renderer,
     camera,
-                                  // Our character
+    model,                              // Our character
     neck,                               // Reference to the neck bone in the skeleton
     waist,                               // Reference to the waist bone in the skeleton
     possibleAnims,                      // Animations found in our file
@@ -22,16 +21,18 @@
     //https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/
     const MODEL_PATH = 'assets/steve.glb';
     const canvas = document.querySelector('#c');
-    const backgroundColor = 0xf1f1f1;
+    const backgroundColor = 0x696969;
     
     // Init the scene
     scene = new THREE.Scene();
     scene.background = new THREE.Color(backgroundColor);
+    //scene.background = null;
     scene.fog = new THREE.Fog(backgroundColor, 60, 100);
     
     // Init the renderer
-    renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+    renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha:true});
     renderer.shadowMap.enabled = true;
+    renderer.setClearColor(0xffffff, 0);
     renderer.setPixelRatio(window.devicePixelRatio);
     document.body.appendChild(renderer.domElement);
     
@@ -77,7 +78,7 @@
           
         });
         
-        model.scale.set(10, 10, 10);
+        model.scale.set(22, 22, 22);
         model.position.y = -11;
                 
         scene.add(model);
@@ -119,24 +120,17 @@
   // Floor
   let floorGeometry = new THREE.PlaneGeometry(5000, 5000, 1, 1);
   let floorMaterial = new THREE.MeshPhongMaterial({
-    color: 0xeeeeee,
+    color: 0x696969,
     shininess: 0,
   });
 
   let floor = new THREE.Mesh(floorGeometry, floorMaterial);
   floor.rotation.x = -0.5 * Math.PI;
-  floor.receiveShadow = true;
+  floor.receiveShadow = false;
   floor.position.y = -11;
   scene.add(floor);
     
-let geometry = new THREE.SphereGeometry(8, 32, 32);
-let material = new THREE.MeshBasicMaterial({ color: 0x9bffaf }); // 0xf2ce2e 
-let sphere = new THREE.Mesh(geometry, material);
-    
-sphere.position.z = -15;
-sphere.position.y = -2.5;
-sphere.position.x = -0.25;
-scene.add(sphere);   
+   
  }
 
  
@@ -159,8 +153,8 @@ scene.add(sphere);
   
    function resizeRendererToDisplaySize(renderer) {
     const canvas = renderer.domElement;
-    let width = window.innerWidth;
-    let height = window.innerHeight;
+    let width = window.innerHeight;
+    let height = window.innerWidth/3;
     let canvasPixelWidth = canvas.width / window.devicePixelRatio;
     let canvasPixelHeight = canvas.height / window.devicePixelRatio;
 
@@ -175,6 +169,7 @@ scene.add(sphere);
   document.addEventListener('mousemove', function(e) {
     var mousecoords = getMousePos(e);
         moveJoint(mousecoords, 50);
+        moveJoint(mousecoords, 30);
       
   });
 
