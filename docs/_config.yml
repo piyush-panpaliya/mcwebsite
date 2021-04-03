@@ -1,0 +1,57 @@
+# Set this website's info
+# Change "coffeebank" to your GitHub username
+# Change "moonrise" to your repository name
+url: "https://piyush-panpaliya.github.io"
+baseurl: "/mcwebsite"
+siteIcon: media/android-chrome-192x192.png
+siteYear: 2021
+siteFooterlink: https://github.com/piyush-panpaliya/mcserver
+showinSearchEngines: true
+# googleAnalyticsID: (uncomment to use)
+
+
+# Set basic server info
+serverName: Server OP
+serverDescription: A Minecraft server where we build best from wardha!
+serverIP: serverop.servermc.gq
+
+# Discord information
+discordInvite: https://discord.gg/kkRe8uq28s
+discordServerID: 794132841540878336
+discordChannelID: 794135757907689472
+
+
+# Navbar Links at the top of the page
+# Uncomment this section to add page functionality!
+siteNav:
+- nname: theWarriorBoy
+  nurl: about
+- nname: ProestNoobBTW
+  nurl: about1
+- nname: screenshot
+  nurl: ss
+
+
+# Build settings
+theme: minima
+# plugins:
+#   - jekyll-feed
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
