@@ -1,6 +1,6 @@
 ---
 layout: page
-navname: screenshot
+tname: screenshot
 ---
 # Stupa
 ![test](media/demo3.jpg){:class="img-responsive"}
