@@ -58,11 +58,11 @@ layout: compress
                         Home
                     </a>
                     {% for nlink  in site.siteNav %}
-                        {% if {{ nlink.nname }} != "screenshot" %}
+                       
                         <a href="{{ site.baseurl }}/{{ nlink.nurl }}" rel="noopener" class="block inline-block {% if page.navname == nlink.nname %}text-white{% else %}text-teal-200 hover:text-white{% endif %} mr-4">
                             {{ nlink.nname }}
                         </a>
-                        {% else %}{% endif %}
+                       
                     {% endfor %}
                 </div>
                 </div>
