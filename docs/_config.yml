@@ -31,6 +31,10 @@ siteNav:
 - nname: screenshot
   nurl: ss
 
+test:
+- tname: ss
+  turl:tss
+
 
 # Build settings
 theme: minima
