@@ -21,18 +21,17 @@
     //https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/
     const MODEL_PATH = 'assets/steve.glb';
     const canvas = document.querySelector('#c');
-    const backgroundColor = 0x696969;
+    const backgroundColor = 0x242424;
     
     // Init the scene
     scene = new THREE.Scene();
-    scene.background = new THREE.Color(backgroundColor);
-    //scene.background = null;
-    scene.fog = new THREE.Fog(backgroundColor, 60, 100);
+    //scene.background = new THREE.Color(backgroundColor);
+    scene.background = null;
     
     // Init the renderer
-    renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha:true});
+    renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true});
     renderer.shadowMap.enabled = true;
-    renderer.setClearColor(0xffffff, 0);
+    renderer.setClearColor(0x242424, 0);
     renderer.setPixelRatio(window.devicePixelRatio);
     document.body.appendChild(renderer.domElement);
     
@@ -118,17 +117,7 @@
     
     
   // Floor
-  let floorGeometry = new THREE.PlaneGeometry(5000, 5000, 1, 1);
-  let floorMaterial = new THREE.MeshPhongMaterial({
-    color: 0x696969,
-    shininess: 0,
-  });
 
-  let floor = new THREE.Mesh(floorGeometry, floorMaterial);
-  floor.rotation.x = -0.5 * Math.PI;
-  floor.receiveShadow = false;
-  floor.position.y = -11;
-  scene.add(floor);
     
    
  }
