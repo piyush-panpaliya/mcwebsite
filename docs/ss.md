@@ -1,6 +1,6 @@
 ---
 layout: page
-tname: ss
+tname: tss
 ---
 # Stupa
 ![test](media/demo3.jpg){:class="img-responsive"}
