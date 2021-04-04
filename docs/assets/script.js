@@ -139,13 +139,13 @@
    function resizeRendererToDisplaySize(renderer) {
     const canvas = renderer.domElement;
     let width , height
-    if (window.innerWidth <= window.innerHeight) {
+    if (document.documentElement.clientWidth < 900) {
         console.log(1)
-         width = window.innerWidth/3;
-         height = window.innerHeight/1.5;
-    }
-    else { width = window.innerWidth/3;
-          height = window.innerHeight/1.5;}
+         width = window.innerWidth/10;
+         height = window.innerHeight/7.5;
+    }else { width = window.innerWidth/3;
+          height = window.innerHeight/1.5;
+          console.log(2)}
 
     
     let canvasPixelWidth = canvas.width / window.devicePixelRatio;
