@@ -110,10 +110,9 @@ layout: compress
     <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js'></script>
     <script src='https://cdn.jsdelivr.net/gh/mrdoob/Three.js@r92/examples/js/loaders/GLTFLoader.js'></script>
     
-    {% if $(window).width() < 739 %}  
-    <script type="text/javascript" src="assets/scriptm.js"></script>  
-    {% else %} {<script type="text/javascript" src="assets/script.js"></script>  
-    {% endif %}
+    <script> if ($(window).width() < 739){   
+    <script type="text/javascript" src="assets/scriptm.js"></script>}  
+    else {<script type="text/javascript" src="assets/script.js"></script>}
    
 </body>
 </html>
