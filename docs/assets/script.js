@@ -45,7 +45,7 @@
     
     let stacy_txt
 
-    if (window.location.href == 'https://piyush-panpaliya.githun.io/mcwebsite/about') {
+    if (window.location.href == 'https://piyush-panpaliya.github.io/mcwebsite/about') {
      stacy_txt = new THREE.TextureLoader().load('assets/texturef.png');}
     else  {
      stacy_txt = new THREE.TextureLoader().load('assets/Steve.png');
