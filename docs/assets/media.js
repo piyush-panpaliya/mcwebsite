@@ -4,8 +4,8 @@ function addCode(code) {
         }
 
 if (document.documentElement.clientWidth < 900){
-    addcode(<script type="text/javascript" src="{{ site.baseurl }}/assets/scriptm.js">);
+    addcode("<script type="text/javascript" src="{{ site.baseurl }}/assets/scriptm.js"></script>");
     }
 else {
-    addcode("<script type="text/javascript" src="{{ site.baseurl }}/assets/script.js">");      
+    addcode("<script type="text/javascript" src="{{ site.baseurl }}/assets/script.js"></script>");      
 }
