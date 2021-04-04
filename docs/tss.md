@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: ss
 tname: tss
 ---
 # Stupa
