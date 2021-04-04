@@ -141,8 +141,8 @@
     let width , height
     if (window.innerWidth <= window.innerHeight) {
         console.log(1)
-         width = window.innerWidth/5;
-         height = window.innerHeight/8;
+         width = window.innerWidth/3;
+         height = window.innerHeight/2;
     }
     else { width = window.innerWidth/3;
           height = window.innerHeight/1.5;}
