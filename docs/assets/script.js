@@ -11,8 +11,8 @@
     clock = new THREE.Clock()         // Used for anims, which run to a clock instead of frame rate 
     //raycaster = new THREE.Raycaster(),  // Used to detect the click on our character
     //loaderAnim = document.getElementById('js-loader');
-  
-  init(); 
+  if (document.documentElement.clientWidth > 700) {
+  init(); }
 
   function init() {
     //https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/
@@ -139,13 +139,8 @@
    function resizeRendererToDisplaySize(renderer) {
     const canvas = renderer.domElement;
     let width , height
-    if (document.documentElement.clientWidth < 900) {
-        console.log(1)
-         width = window.innerWidth/10;
-         height = window.innerHeight/7.5;
-    }else { width = window.innerWidth/3;
-          height = window.innerHeight/1.5;
-          console.log(2)}
+    width = window.innerWidth/10;
+     height = window.innerHeight/7.5;
 
     
     let canvasPixelWidth = canvas.width / window.devicePixelRatio;
