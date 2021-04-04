@@ -6,14 +6,11 @@
     camera,
     model,                              // Our character
     neck,                               // Reference to the neck bone in the skeleton
-    waist,                               // Reference to the waist bone in the skeleton
-    possibleAnims,                      // Animations found in our file
+    waist,                               // Reference to the waist bone in the skeleton                      // Animations found in our file
     mixer,                              // THREE.js animations mixer
-    idle,                               // Idle, the default state our character returns to
-    clock = new THREE.Clock(),          // Used for anims, which run to a clock instead of frame rate 
-    currentlyAnimating = false,         // Used to check whether characters neck is being used in another anim
-    raycaster = new THREE.Raycaster(),  // Used to detect the click on our character
-    loaderAnim = document.getElementById('js-loader');
+    clock = new THREE.Clock()         // Used for anims, which run to a clock instead of frame rate 
+    //raycaster = new THREE.Raycaster(),  // Used to detect the click on our character
+    //loaderAnim = document.getElementById('js-loader');
   
   init(); 
 
@@ -46,7 +43,14 @@
     camera.position.x = 0;
     camera.position.y = -3;
     
-    let stacy_txt = new THREE.TextureLoader().load('assets/texturef.png');
+    let stacy_txt
+
+    if (window.location.href == 'http://127.0.0.1:4000/mcwebsite/about') {
+     stacy_txt = new THREE.TextureLoader().load('assets/texturef.png');}
+    else  {
+     stacy_txt = new THREE.TextureLoader().load('assets/Steve.png');
+    }
+    //else{}  (window.location.href == 'http://127.0.0.1:4000/mcwebsite/about1')
     stacy_txt.flipY = false;
 
     const stacy_mtl = new THREE.MeshPhongMaterial({
@@ -85,7 +89,7 @@
         
         loaderAnim.remove();
         
-        mixer = new THREE.AnimationMixer(model);
+        //mixer = new THREE.AnimationMixer(model);
         
         
       },
@@ -114,19 +118,11 @@
     dirLight.shadow.camera.bottom = d * -1;
     // Add directional Light to scene
     scene.add(dirLight);
-    
-    
-  // Floor
-
-    
-   
  }
 
  
   function update() {
-    if (mixer) {
-      mixer.update(clock.getDelta());
-    }
+    
     
     if (resizeRendererToDisplaySize(renderer)) {
       const canvas = renderer.domElement;
@@ -157,8 +153,7 @@
   
   document.addEventListener('mousemove', function(e) {
     var mousecoords = getMousePos(e);
-        moveJoint(mousecoords, 50);
-        moveJoint(mousecoords, 30);
+        moveJoint(mousecoords, 30,model);
       
   });
 
@@ -166,7 +161,7 @@
     return { x: e.clientX, y: e.clientY };
   }
   
-    function moveJoint(mouse,degreeLimit) {
+    function moveJoint(mouse,degreeLimit,model) {
       let degrees = getMouseDegrees(mouse.x, mouse.y, degreeLimit);
       model.rotation.y = 90
       //joint.rotation.y = THREE.Math.degToRad(degrees.x);
