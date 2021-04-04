@@ -1,5 +1,5 @@
 let code
-function addCode(code) {
+function addcode(code) {
             document.getElementById("s").innerHTML += code ;
         }
 
