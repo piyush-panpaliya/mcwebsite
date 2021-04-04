@@ -48,7 +48,7 @@
     if (window.location.href == 'https://piyush-panpaliya.github.io/mcwebsite/about') {
      stacy_txt = new THREE.TextureLoader().load('assets/texturef.png');}
     else  {
-     stacy_txt = new THREE.TextureLoader().load('assets/Steve.png');
+     stacy_txt = new THREE.TextureLoader().load('assets/ProestNoobBTW.png');
     }
     //else{}  (window.location.href == 'http://127.0.0.1:4000/mcwebsite/about1')
     stacy_txt.flipY = false;
