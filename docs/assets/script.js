@@ -139,8 +139,8 @@
    function resizeRendererToDisplaySize(renderer) {
     const canvas = renderer.domElement;
     let width , height
-    width = window.innerWidth/10;
-     height = window.innerHeight/7.5;
+    width = window.innerWidth/2;
+     height = window.innerHeight/1.5;
 
     
     let canvasPixelWidth = canvas.width / window.devicePixelRatio;
