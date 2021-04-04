@@ -1,6 +1,6 @@
 let code
 function addcode(code) {
-            document.getElementById("s").innerHTML += code ;
+            document.getElementById("s").innerHTML = code ;
         }
 
 if (document.documentElement.clientWidth < 900){
