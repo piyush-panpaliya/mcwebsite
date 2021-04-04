@@ -11,8 +11,8 @@
     clock = new THREE.Clock()         // Used for anims, which run to a clock instead of frame rate 
     //raycaster = new THREE.Raycaster(),  // Used to detect the click on our character
     //loaderAnim = document.getElementById('js-loader');
-  if (document.documentElement.clientWidth > 700) {
-  init(); }
+  
+  init(); 
 
   function init() {
     //https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/
